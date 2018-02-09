@@ -114,8 +114,11 @@ class _ListBase(CollectionMixin):
     def _filter_lists(self, request, **kw):
         """Filter a collection using query parameters."""
         advertised = request.get_param_as_bool('advertised')
+        owner = request.get_param('owner')
         if advertised:
             kw['advertised'] = True
+        if owner:
+            kw['owner'] = owner
         return getUtility(IListManager).find(**kw)
 
 

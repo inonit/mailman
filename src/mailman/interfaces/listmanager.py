@@ -157,7 +157,7 @@ class IListManager(Interface):
         """An iterator over the 2-tuple of (list_name, mail_host) for all
         mailing lists managed by this list manager.""")
 
-    def find(*, advertised=None, mail_host=None):
+    def find(*, advertised=None, mail_host=None, owner=None):
         """Search for mailing lists matching some criteria.
 
         The keyword arguments are mailing list properties that will be

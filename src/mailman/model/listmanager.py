@@ -22,11 +22,14 @@ from mailman.interfaces.address import InvalidEmailAddressError
 from mailman.interfaces.listmanager import (
     IListManager, ListAlreadyExistsError, ListCreatedEvent, ListCreatingEvent,
     ListDeletedEvent, ListDeletingEvent)
+from mailman.interfaces.member import MemberRole
 from mailman.interfaces.requests import IListRequests
 from mailman.model.autorespond import AutoResponseRecord
 from mailman.model.bans import Ban
 from mailman.model.mailinglist import (
     IAcceptableAliasSet, ListArchiver, MailingList)
+from mailman.model.address import Address
+from mailman.model.member import Member
 from mailman.model.mime import ContentFilter
 from mailman.utilities.datetime import now
 from mailman.utilities.queries import QuerySequence
@@ -133,11 +136,13 @@ class ListManager:
             yield list_name, mail_host
 
     @dbconnection
-    def find(self, store, *, advertised=None, mail_host=None):
+    def find(self, store, *, advertised=None, mail_host=None, owner=None):
         query = store.query(MailingList)
         if advertised is not None:
             query = query.filter_by(advertised=advertised)
         if mail_host is not None:
             query = query.filter_by(mail_host=mail_host)
+        if owner is not None:
+            query = query.join(Member, MailingList._list_id==Member.list_id).join(Address, Member.address_id==Address.id).filter(Address.email==owner, Member.role==MemberRole.owner)
         query = query.order_by(MailingList._list_id)
         return QuerySequence(query)
