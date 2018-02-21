@@ -33,6 +33,7 @@ with open('src/mailman/version.py') as fp:
         mo = re.match("VERSION = '(?P<version>[^']+?)'", line)
         if mo:
             __version__ = mo.group('version')
+            __version__ = "{}+inonit".format(__version__)
             break
     else:
         print('No version number found')
