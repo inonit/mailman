@@ -1,4 +1,6 @@
-Velkommen til "$display_name"!
+Velkommen til "$display_name", en medlemstjeneste fra Norsk Kennel Klub!
+
+Du mottar denne meldingen fordi du er blitt tilmeldt distribusjonslisten "$display_name". 
 
 Du kan sende en epost til 
   $listname, og den vil bli videresendt til alle på denne listen.
