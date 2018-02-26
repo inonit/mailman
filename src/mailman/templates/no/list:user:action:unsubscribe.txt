@@ -1,0 +1,12 @@
+Avmelding av epostliste
+
+Vi har mottatt en melding fra deg om at onsker å avslutte abonnementet. Henvendelsen gjelder 
+
+    $user_email
+
+For at vi skal kunne fullfre prosessen med å avmelde deg, må du svare på denne meldingen. Behold tittelfeltet som det er. 
+
+Hvis du ikke ønsker å melde deg av, kan du trygt se bort fra denne meldingen.
+    
+
+Hilsen $owner_email

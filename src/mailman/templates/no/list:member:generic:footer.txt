@@ -1,0 +1,3 @@
+_______________________________________________
+$display_name mailing list -- $listname
+Melde deg ut? Send en tom epost til  ${short_listname}-leave@${domain}
