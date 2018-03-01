@@ -4,5 +4,4 @@ Du mottar denne meldingen fordi du er blitt tilmeldt distribusjonslisten "$displ
 
 Du kan sende en epost til 
   $listname, og den vil bli videresendt til alle på denne listen.
----templates/no
 
