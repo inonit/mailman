@@ -1,6 +1,0 @@
-Bekreftelse på tilmelding til epostlisten "$display_name"
-
-Hei, vi på $domain har mottatt en påmelding fra deg. Dersom du ønsker å motta epost sendt til denne listen, må du svare på denne eposten uten endre på tittelfeltet. Du trenger ikke skrive noe annet i meldingen.
-
-"$display_name" er en medlemstjeneste fra Norsk Kennel Klub.
-
