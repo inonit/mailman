@@ -234,7 +234,7 @@ class Moderation:
         # For cut-n-paste convenience.                                       
         mlist = mailing_list                                                 
         mlist.max_num_recipients = 10                                        
-        mlist.max_message_size = 40               # KB                       
+        mlist.max_message_size = 500               # KB                       
         mlist.require_explicit_destination = True                            
         mlist.bounce_matching_headers = """                                  
 # Lines that *start* with a '#' are comments.                                
@@ -254,5 +254,5 @@ from: .*@uplinkpro.com
         mlist.forward_auto_discards = True                                   
         mlist.nonmember_rejection_notice = ''                                
         # automatic discarding                                               
-        mlist.max_days_to_hold = 0                                           
+        mlist.max_days_to_hold = 10                                           
                                       
